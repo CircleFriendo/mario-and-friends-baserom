@@ -9,6 +9,8 @@ header
 !spinjumpflag = $140D
 !spinjumpenableflag = $7f9e08   ;FreeRAM
 
+!enemybouncetrigger = $7f9e07          ;FreeRAM
+
 ;;; Three bytes each to store addresses
 !jump_speed         = $7f9f00   ;FreeRAM
 !neutral_decel      = $7f9f03   ;FreeRAM
@@ -635,6 +637,7 @@ diagonal_pipe_hijack:
     +   jml $00DC2D
 
 enemy_bounce_hijack:
+        LDA #$01 : STA !enemybouncetrigger
         lda !riding_yoshi
         BNE ++
         lda !enemy_bounce_low
