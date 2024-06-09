@@ -41,6 +41,9 @@ DetectSwitch:
     JSL dash_clear
     
 +
+    JSR Abilities
+
+    RTL
 
 
 Abilities:
@@ -51,54 +54,52 @@ Abilities:
     JSL dash_always
 
     LDA !player
-    CMP #!mario
-    BNE ++
-    
+    ASL A : TAX
+    JMP.w (Players,X)
+
+Players:
+    dw Mario
+    dw Luigi
+    dw Peach
+    dw Daisy
+    dw Wario
+    dw Waluigi
+
+
+Mario:    
     JSL physicstables_default
     JSL names_mario
-    
-++  LDA !player
-    CMP #!luigi
-    BNE ++
-    
+    RTS
+
+Luigi:
     JSL physicstables_luigi
     JSL groundpound_main
     JSL luigiscuttle_main
     JSL names_luigi
-    
-++  LDA !player
-    CMP #!daisy
-    BNE ++
-    
+    RTS
+
+Daisy:    
     JSL physicstables_daisy
     JSL flutterjump_active
     JSL names_daisy
-    
-++  LDA !player
-    CMP #!peach
-    BNE ++
-    
+    RTS
+
+Peach:
     JSL physicstables_peach
     JSL float_active
     JSL names_peach
-    
-++  LDA !player
-    CMP #!wario
-    BNE ++
-    
+    RTS
+
+Wario:    
     JSL physicstables_wario
     JSL dash_active
     JSL names_wario
-      
-++  LDA !player
-    CMP #!waluigi
-    BNE ++
-    
+    RTS  
+
+Waluigi:
     JSL physicstables_waluigi
     JSL boostjump_active
     JSL names_waluigi
-
-++
-    RTL
+    RTS
  
    
