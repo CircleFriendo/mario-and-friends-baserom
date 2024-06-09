@@ -8,7 +8,9 @@
 
 !riding_yoshi = $187A
 
-Init:
+incsrc "../characterlist/characterlist.asm"
+
+init:
 
     LDA #$00
     STA !propeltimer
@@ -19,7 +21,7 @@ Init:
     
     RTL
 
-Main:
+main:
 propel:
     JSL always
     
@@ -41,6 +43,8 @@ active:
     beq +
 
 .charge
+    LDA !player : CMP #!waluigi : BNE .return
+
     lda $18
     and #$80  ; A only
     beq .return

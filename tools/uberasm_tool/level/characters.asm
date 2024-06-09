@@ -7,11 +7,11 @@ init:
     LDA !player
     STA !lastplayer
     
-    JSL boostjump_Init
-    JSL float_Init
-    JSL flutterjump_Init
-    JSL groundpound_Init
-    JSL dash_Init
+    JSL boostjump_init
+    JSL float_init
+    JSL flutterjump_init
+    JSL groundpound_init
+    JSL dash_init
     
     RTL
     
@@ -34,24 +34,19 @@ DetectSwitch:
     LDA #$0B   ; character select sound
     STA $1DFC
     
-    JSL flutterjump_clear
-    JSL boostjump_clear
-    JSL float_clear
-    JSL groundpound_clear
-    JSL dash_clear
-    
 +
     JSR Abilities
+
+    JSL groundpound_main
+    JSL flutterjump_main
+    JSL float_main
+    JSL dash_main
+    JSL boostjump_main
 
     RTL
 
 
 Abilities:
-
-    JSL boostjump_always
-    JSL flutterjump_always
-    JSL float_always
-    JSL dash_always
 
     LDA !player
     ASL A : TAX
@@ -72,33 +67,28 @@ Mario:
     RTS
 
 Luigi:
-    JSL physicstables_luigi
-    JSL groundpound_main
+    JSL physicstables_luigi    
     JSL luigiscuttle_main
     JSL names_luigi
     RTS
 
 Daisy:    
     JSL physicstables_daisy
-    JSL flutterjump_active
     JSL names_daisy
     RTS
 
 Peach:
     JSL physicstables_peach
-    JSL float_active
     JSL names_peach
     RTS
 
 Wario:    
     JSL physicstables_wario
-    JSL dash_active
     JSL names_wario
     RTS  
 
 Waluigi:
     JSL physicstables_waluigi
-    JSL boostjump_active
     JSL names_waluigi
     RTS
  

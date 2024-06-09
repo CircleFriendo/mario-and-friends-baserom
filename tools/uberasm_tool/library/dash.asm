@@ -21,7 +21,9 @@
 !no_small       = 0             ;   Whether you can dash while small or no
   
 
-Init:
+  incsrc "../characterlist/characterlist.asm"
+
+init:
     LDA #$00
     STA !DashTimer
     STA !DashCooldownTimer
@@ -35,7 +37,7 @@ clear:
     
 ; Wario Dash - by K3fka
 
-Main:
+main:
 
     JSL always
         
@@ -143,6 +145,9 @@ always:
     RTL
     
 ButtonCheck:
+
+        LDA !player : CMP #!wario : BNE End  ; Wario only
+
         LDA !dashbutton_ram ;\ 
         AND #!dashbutton    ; | Jump to the end if we're NOT pressing X
         BEQ End         ;/

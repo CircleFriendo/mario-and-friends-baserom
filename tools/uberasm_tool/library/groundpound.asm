@@ -1,7 +1,7 @@
 ;Ground Pound UberASM
 ;this one gives ground pound ability that acts the same as yellow yoshi + shell/yoshi + yellow shell.
 
-
+incsrc "../characterlist/characterlist.asm"
 
 ;Frame used during ground pound
 !GroundPndFrame = $1C		;
@@ -24,7 +24,7 @@
 !ButtonTrigger = $80       ; A button
 
 
-Init:
+init:
 clear:
     LDA #$00
     STA !GroundPndTimer
@@ -67,6 +67,9 @@ BEQ NoPoundAndDelay		;
 
 LDA !GroundPndTimer		;delay
 BNE .ReTimer			;
+
+
+LDA !player : CMP #!luigi : BNE .Re ; Luigi only
 
 LDA !ControllerTrigger		;check for controller input that triggers ground pound
 AND #!ButtonTrigger		;

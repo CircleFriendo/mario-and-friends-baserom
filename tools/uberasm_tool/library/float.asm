@@ -5,12 +5,14 @@
 !floattime = $30     ; actual length of float
 !floatvspeed = $00
 
-Init:
+incsrc "../characterlist/characterlist.asm"
+
+init:
     LDA #$00 : STA !floattimer 
     LDA #$01 : STA !floatcharge  
     RTL
 
-Main:
+main:
    
 
 active:
@@ -30,6 +32,9 @@ active:
     lda $17
     and #$80  ; A only
     beq .dectimer
+
+
+    LDA !player : CMP #!peach : BNE .dectimer
 
     ; start float     
     lda #$00 : sta !floatcharge

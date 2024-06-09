@@ -12,14 +12,22 @@
 
 !FlutterAnimation = 1	; Change this to 0 to disable the flutter animation
 
+incsrc "../characterlist/characterlist.asm"
 
-
-Init:
+init:
     LDA #$00 : STA !fluttertimer
     LDA #$01 : STA !fluttercharge
     RTL
 
-Main:
+
+Reset:	;Stop the flutter jump
+    LDA #$00
+	STA !fluttertimer
+	STA !FC
+.Return:
+	RTL   
+
+main:
     JSL always
 
 active:
@@ -30,7 +38,7 @@ active:
     +
 
 	LDA $187A|!addr
-	BNE .Reset
+	BNE Reset
 	
 	if !FlutterAnimation
 		LDA !fluttertimer
@@ -79,6 +87,8 @@ active:
         STA !fluttertimer
         
 .NoFlutter:    ;;; not fluttering, decrement the cooldown timer
+
+	LDA !player : CMP #!daisy : BNE .Return ; Daisy only
 
 	LDA $18       ;change these two lines to alter which button you want to press. controller values are in the RAM section of smwcentral.net
 	AND #$80
