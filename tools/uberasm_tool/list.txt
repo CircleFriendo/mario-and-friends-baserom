@@ -15,6 +15,11 @@ overworld:
 
 ; Game mode resources
 gamemode:
+05  defaultcharacter.asm
+0E  overworldswitch.asm
+13  preloadname.asm
+14  switchmode.asm
+1B  defaultphysics.asm
 
 ; Other code files and free RAM setting.  These don't usually need to be changed.
 global:         other/global_code.asm
