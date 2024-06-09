@@ -9,5 +9,7 @@
 
 ;;; FreeRAM locations
 
+
+!enemybouncetrigger = $7f9e07          ;FreeRAM
 !player = $7f9e10   ;FreeRAM
 !lastplayer = $7f9e11    ;FreeRAM

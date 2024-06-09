@@ -87,6 +87,8 @@ always:
     lda $75              ; Refresh charges in water
     bne .refreshcharges
     
+    LDA !enemybouncetrigger : BNE .refreshcharges
+
     RTL
 
 .refreshcharges

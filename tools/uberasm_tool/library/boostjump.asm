@@ -102,11 +102,14 @@ always:
     lda $75              ; Refresh charges in water
     bne +
     
+    LDA !enemybouncetrigger : BNE +
+
     RTL
 
 +   lda #$01
     STA !propelcharge
     LDA #$00
     STA !propeltimer    ;;;;;;;;;;;;;;;  
-
+    STA !propellocked   
+   
     RTL

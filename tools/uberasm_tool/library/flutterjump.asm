@@ -131,6 +131,8 @@ always:
     LDA $75
     BNE .refresh
     
+	LDA !enemybouncetrigger : BNE .refresh
+
     RTL
     
 .refresh

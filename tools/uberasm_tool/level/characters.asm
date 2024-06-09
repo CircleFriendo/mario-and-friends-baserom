@@ -35,7 +35,7 @@ DetectSwitch:
     STA $1DFC
     
 +
-    JSR Abilities
+    JSR Character
 
     JSL groundpound_main
     JSL flutterjump_main
@@ -43,10 +43,12 @@ DetectSwitch:
     JSL dash_main
     JSL boostjump_main
 
+    LDA #$00 : STA !enemybouncetrigger
+
     RTL
 
 
-Abilities:
+Character:
 
     LDA !player
     ASL A : TAX
