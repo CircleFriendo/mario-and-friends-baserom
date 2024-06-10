@@ -3,22 +3,23 @@ includeonce
 
 
 
-!enemybouncetrigger = $7f9e07   ;FreeRAM
-
-!GroundPndFlag =      $7f9e00	;FreeRAM  
-!GroundPndTimer =     $7f9e01	;FreeRAM 
-!FC =                 $7f9e02	;FreeRAM 
-!scuttle = $7f9e03   ;FreeRAM
-!floatcharge = $7f9e04    ;FreeRAM
-!floattimer = $7f9e05     ;FreeRAM
+!GroundPndFlag      = $7f9e00	;FreeRAM  
+!GroundPndTimer     = $7f9e01	;FreeRAM 
+!FC                 = $7f9e02	;FreeRAM 
+!scuttle            = $7f9e03   ;FreeRAM
+!floatcharge        = $7f9e04    ;FreeRAM
+!floattimer         = $7f9e05     ;FreeRAM
 !DashTimer          = $7f9e06  ;FreeRAM
 !DashCooldownTimer  = $7f9e07  ;FreeRAM 
 !spinjumpenableflag = $7f9e08   ;FreeRAM
-!fluttercharge = $7f9e09    ;FreeRAM
-!fluttertimer = $7f9e0a	;FreeRAM   
-!propelcharge = $7f9e0b   ;FreeRAM 
-!propellocked = $7f9e0c   ;FreeRAM    
-!propeltimer = $7f9e0d    ;FreeRAM 
+!fluttercharge      = $7f9e09    ;FreeRAM
+!fluttertimer       = $7f9e0a	;FreeRAM   
+!propelcharge       = $7f9e0b   ;FreeRAM 
+!propellocked       = $7f9e0c   ;FreeRAM    
+!propeltimer        = $7f9e0d    ;FreeRAM
+!enemybouncetrigger = $7f9e0e   ;FreeRAM
+
+
 !player = $7f9e10               ;FreeRAM
 !lastplayer = $7f9e11           ;FreeRAM
 
