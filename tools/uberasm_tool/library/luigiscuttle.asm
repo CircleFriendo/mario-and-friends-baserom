@@ -1,15 +1,16 @@
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
 
 
-!scuttle = $7f9e03   ;FreeRAM
 
 main:
 
     LDA $187A|!addr : BNE .Return
-	LDA !scuttle|!addr : INC
+	LDA !scuttle : INC
 	CMP #$0C : BNE +
 	LDA #$00
 +:
-	STA !scuttle|!addr
+	STA !scuttle
 	LDA $13E0|!addr
 	CMP #$0B : BEQ .Jump
 	CMP #$24 : BEQ .Jump
@@ -19,7 +20,7 @@ main:
 	LDX $19 : BEQ +
 	LDX #$01
 +:
-	LDA !scuttle|!addr
+	LDA !scuttle
 	CMP #$03 : BCS +
 	INX #$00 : BRA ++
 +:

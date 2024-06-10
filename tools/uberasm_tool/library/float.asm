@@ -1,11 +1,10 @@
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
 
 ;; Peach float parameters
-!floatcharge = $7f9e04    ;FreeRAM
-!floattimer = $7f9e05     ;FreeRAM
+
 !floattime = $30     ; actual length of float
 !floatvspeed = $00
-
-incsrc "../characterlist/characterlist.asm"
 
 init:
     LDA #$00 : STA !floattimer 

@@ -1,36 +1,42 @@
-incsrc "../characterlist/characterlist.asm"
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
 
 main:
     
     LDA !player
-    CMP #!mario
-    BNE ++
+    ASL A : TAX
+    JMP.w (Players,X)
+
+Players:
+    dw Mario
+    dw Luigi
+    dw Peach
+    dw Daisy
+    dw Wario
+    dw Waluigi
+
+
+
+Mario:
     JSL names_mario
-    
-++  LDA !player
-    CMP #!luigi
-    BNE ++
+    RTL
+
+Luigi:
     JSL names_luigi
-    
-++  LDA !player
-    CMP #!daisy
-    BNE ++
+    RTL
+
+Daisy:
     JSL names_daisy
+    RTL
     
-++  LDA !player
-    CMP #!peach
-    BNE ++
+Peach:
     JSL names_peach
+    RTL
     
-++  LDA !player
-    CMP #!wario
-    BNE ++
+Wario:
     JSL names_wario
+    RTL
     
-++  LDA !player
-    CMP #!waluigi
-    BNE ++
+Waluigi:
     JSL names_waluigi
-    
-++  
     RTL

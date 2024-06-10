@@ -1,7 +1,8 @@
 ;Ground Pound UberASM
 ;this one gives ground pound ability that acts the same as yellow yoshi + shell/yoshi + yellow shell.
 
-incsrc "../characterlist/characterlist.asm"
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
 
 ;Frame used during ground pound
 !GroundPndFrame = $1C		;
@@ -14,12 +15,8 @@ incsrc "../characterlist/characterlist.asm"
 !GroundPndStartSound = $23
 !GroundPndStartBank = $1DF9|!addr
 
-!GroundPndFlag = $7f9e00	;FreeRAM  
- ;also acts like speed container for faster fall. RAM reusin' rules
 
-!GroundPndTimer = $7f9e01	;FreeRAM 
-;how long to stay in air after pressing trigger button. also used for delay before player can re-activate ground pound again.
-
+ 
 !ControllerTrigger = $18
 !ButtonTrigger = $80       ; A button
 

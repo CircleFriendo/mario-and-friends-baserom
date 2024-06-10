@@ -1,14 +1,10 @@
+incsrc "../../shared/freeram.asm"
+incsrc "../../shared/characters.asm"
+
 !ReplaceExtendedTiles = 1
 
-!player = $7f9e10   ;FreeRAM
 
-;;; Character List
-!mario = $00
-!luigi = $01
-!peach = $02
-!daisy = $03
-!wario = $04
-!waluigi = $05
+
 
 header
 if read1($00FFD5) == $23

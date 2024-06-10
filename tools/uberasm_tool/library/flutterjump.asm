@@ -5,14 +5,12 @@
 ;;UberASM conversion by MarioFanGamer
 ;;
 
-;; Daisy flutter parameters
-!fluttercharge = $7f9e09    ;FreeRAM
-!fluttertimer = $7f9e0a	;FreeRAM   ;[T]ime [T]o [F]lutter [J]ump
-!FC = $7f9e02	        ;FreeRAM   ;[F]lutter [C]arry
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
+
+
 
 !FlutterAnimation = 1	; Change this to 0 to disable the flutter animation
-
-incsrc "../characterlist/characterlist.asm"
 
 init:
     LDA #$00 : STA !fluttertimer

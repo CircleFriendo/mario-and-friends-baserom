@@ -1,14 +1,12 @@
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
 
-!propelcharge = $7f9e0b   ;FreeRAM 
-!propellocked = $7f9e0c   ;FreeRAM    
-!propeltimer = $7f9e0d    ;FreeRAM 
 !propeltime = $10
 !propelspeed = $C6
 
 
 !riding_yoshi = $187A
 
-incsrc "../characterlist/characterlist.asm"
 
 init:
 

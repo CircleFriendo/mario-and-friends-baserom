@@ -1,5 +1,5 @@
-incsrc "../characterlist/characterlist.asm"
-
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
 Main:
 
 ;; we use L/R for character switching so disable scrolling

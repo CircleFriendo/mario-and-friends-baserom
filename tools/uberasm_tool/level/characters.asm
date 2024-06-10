@@ -1,4 +1,5 @@
-incsrc "../characterlist/characterlist.asm"
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
 
 init:
     ;;; You can load a default starting character here if you like
@@ -16,8 +17,6 @@ init:
     RTL
     
 main:
-    
-    ;;; this line is the only difference from noswitchmode.asm
     JSL switch_Main
 
 DetectSwitch:

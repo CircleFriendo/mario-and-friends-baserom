@@ -1,7 +1,8 @@
+incsrc "../../../shared/freeram.asm"
+incsrc "../../../shared/characters.asm"
+
 ;;   Wario Dash Parameters
 !dashspeed          = $38           ;   The dash speed
-!DashTimer          = $7f9e06  ;FreeRAM   ;   The dash timer
-!DashCooldownTimer  = $7f9e07  ;FreeRAM  ;   The dash cooldown timer
 !DashTime           = $1F          ;   Time you will dash for
 !DashCooldown       = !DashTime+$30          ;   Time before you can dash again
 !DashJumpYSpeed		= $98	; Normal jump speed
@@ -19,10 +20,7 @@
 !dashbutton         = $80           ;\  The button you use  
 !dashbutton_ram     = $18           ;/  See https://www.smwcentral.net/?p=memorymap&game=smw&u=0&address=7E0016-7E0018
 !no_small       = 0             ;   Whether you can dash while small or no
-  
-
-  incsrc "../characterlist/characterlist.asm"
-
+ 
 init:
     LDA #$00
     STA !DashTimer

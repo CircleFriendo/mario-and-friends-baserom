@@ -1,4 +1,4 @@
-incsrc "../characterlist/characterlist.asm"
+incsrc "../../../shared/freeram.asm"
 
 main: 
     JSL switch_Main
