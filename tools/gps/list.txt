@@ -19,6 +19,15 @@
 ; 200-20A - reserved for layer 3 Tide act-as feature
 ; 209-28F - occupied with vanilla Tiles
 
+
+0210:0025 character/mario.asm
+0211:0025 character/luigi.asm
+0212:0025 character/peach.asm
+0213:0025 character/daisy.asm
+0214:0025 character/wario.asm
+0215:0025 character/waluigi.asm
+
+
 ; Custom Global Blocks
 
 0290:0130 global/mario_passable.asm
