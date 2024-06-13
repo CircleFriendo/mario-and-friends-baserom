@@ -1,3 +1,6 @@
+;;@name Capespin Direction Consistency
+;;@author Katun24, AmperSam, binavik
+
 incsrc "../../../shared/freeram.asm"
 
 ; Capespin Direction Consistency (a.k.a. Turnaround) by Katun24, converted to SA-1 by AmperSam, made freeram toggleable by binavik

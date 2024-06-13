@@ -1,3 +1,7 @@
+;;@name Spiketop Ceiling Fix
+;;@author imamelia
+;;@url https://smwc.me/s/18949
+
 if read1($00FFD5) == $23
 	sa1rom
 	!SA1 = 1

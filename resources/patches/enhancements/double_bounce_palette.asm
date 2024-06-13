@@ -1,3 +1,6 @@
+;;@name Double Bounce Palette
+;;@author Fernap
+
 !DoubleBouncePalette = $09     ; palette for double bounce shell 08-0F
 
 if read1($00FFD5) == $23

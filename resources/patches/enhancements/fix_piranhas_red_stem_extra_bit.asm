@@ -1,3 +1,6 @@
+;;@name Red Stem Piranha Plants on Extra Bit and Stem Fix
+;;@author Koopster
+
 ;===================================================================================================
 ;Red Stem Piranha Plants on Extra Bit + Stem Fix, by Koopster
 ;

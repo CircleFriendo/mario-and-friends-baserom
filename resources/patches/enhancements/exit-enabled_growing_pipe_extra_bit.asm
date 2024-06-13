@@ -1,3 +1,6 @@
+;;@name Exit-Enabled Growing Pipe on Extra Bit
+;;@author JamesD28
+
 ; ---------------------------------------- ;
 ; Growing/Shrinking Pipe Exit on Extra Bit ;
 ;               By JamesD28                ;

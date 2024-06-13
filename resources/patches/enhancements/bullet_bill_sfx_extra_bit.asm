@@ -1,3 +1,8 @@
+;;@name Bullet Bill Sound Effect on Extra Bit
+;;@author AmperSam
+;;@url https://smwc.me/s/34948
+
+
 ;==================================================================;
 ; Bullet Bill Sound Effect on Extra bit patch by AmperSam          ;
 ;                                                                  ;

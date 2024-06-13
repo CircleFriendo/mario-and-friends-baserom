@@ -1,3 +1,8 @@
+;;@name Placeable Kicked Shell
+;;@author KevinM
+;;@url https://smwc.me/s/28994
+
+
 ;===============================================================================;
 ; Placeable Kicked Shell patch v1.1 by KevinM                                   ;
 ;                                                                               ;

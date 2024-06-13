@@ -1,3 +1,7 @@
+;;@name Triple Ball'n'Chain
+;;@author imamelia
+;;@url https://smwc.me/s/19256
+
 if read1($00FFD5) == $23
 	sa1rom
 	!sa1	= 1

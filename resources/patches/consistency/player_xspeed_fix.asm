@@ -1,3 +1,7 @@
+;;@name Player X Speed Fix
+;;@author GreenHammerBro, tjb0607, AmperSam
+
+
 ;Player X Speed Fix v3.0 by GreenHammerBro and tjb, with edits by AmperSam
 !FixOscillation = 1		;Fix the speed oscillation bug
 !FixDeceleration = 0	;Fix behavior where holding forward can slow you down if you're over the max speed

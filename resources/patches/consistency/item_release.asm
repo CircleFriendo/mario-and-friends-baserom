@@ -1,3 +1,6 @@
+;;@name Item release
+;;@author Katun24, tjb0607
+
 ; code by katun24, based on code by tjb0607
 ;
 ; This patch alters some of the physics of item releases while spinning or climbing:

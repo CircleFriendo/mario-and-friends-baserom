@@ -1,3 +1,7 @@
+;;@name Sprite Submap Behaviour on Extra Bit
+;;@author Kevin
+;;@url https://smwc.me/s/30450
+
 ; This patch will remove the submap/level specific behavior of a few
 ; vanilla sprites and make them depend on the extra bit instead.
 ; Note that you need to have used PIXI on the ROM in order for it to work.

@@ -1,3 +1,7 @@
+;;@name Placeable Disco Shell
+;;@author Alcaro
+;;@url https://smwc.me/s/21597
+
 if read1($00FFD5) == $23
 	sa1rom
 	!14C8 = $3242

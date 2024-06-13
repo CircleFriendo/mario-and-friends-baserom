@@ -1,3 +1,7 @@
+;;@name Poison mushroom
+;;@author mikeyk, JackTheSpades
+;;@url https://smwc.me/s/20440
+
 ; Poison mushroom patch
 ; original binary by mikey, asm version plus slight modification by JackTheSpades
 ;

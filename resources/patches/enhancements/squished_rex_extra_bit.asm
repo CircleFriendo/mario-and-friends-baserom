@@ -1,3 +1,7 @@
+;;@name Squished Rex on Extra Bit
+;;@author Supermario1313
+;;@url https://smwc.me/s/27788
+
 ; squishyrex.asm by Supermario1313
 ;
 ; Makes rexes with extra bit set to 1 to spawn squished.

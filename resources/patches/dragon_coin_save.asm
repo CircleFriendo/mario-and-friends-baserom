@@ -1,3 +1,6 @@
+;;@name Individual Dragon Coin Save
+;;@url https://smwc.me/s/22888
+;;@author JackTheSpades, lx5, worldpeace
 
 ;;;;;;;;;;;;;;;;; DEFINITIONS ;;;;;;;;;;;;;;;;;
 

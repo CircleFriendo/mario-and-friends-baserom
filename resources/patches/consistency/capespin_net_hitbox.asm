@@ -1,3 +1,7 @@
+;;@name Capespin Hitbox Consistency
+;;@author Katun24, AmperSam
+
+
 ; Capespin Hitbox Consistency + Net Punching Hitbox Correction - patch by Katun24,  SA-1 conversion by AmperSam
 ;
 ; Capespinning in vanilla SMW has the following properties:

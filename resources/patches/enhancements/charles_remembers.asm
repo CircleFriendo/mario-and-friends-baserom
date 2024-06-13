@@ -1,3 +1,5 @@
+;;@name Charles Remembers
+
 if read1($00FFD5) == $23
 	sa1rom
 	!9E = $3200
