@@ -1,3 +1,7 @@
+;;@name Layer 2 Buoyancy Optimization
+;;@author worldpeace
+;;@url https://smwc.me/s/16366
+
 ; This patch reduces the unnecessary cost of sprite interaction with layer 2,
 ; when the 2nd buoyancy option(disables all other sprite interaction with layer 2) is checked in a layer 2 level.
 

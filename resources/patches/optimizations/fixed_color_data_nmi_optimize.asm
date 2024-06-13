@@ -1,3 +1,7 @@
+;;@name Fixed Color Data NMI Optimization
+;;@author Ladida
+;;@url https://smwc.me/s/18596
+
 if read1($00FFD6) == $15
 	sa1rom
 	!addr = $6000

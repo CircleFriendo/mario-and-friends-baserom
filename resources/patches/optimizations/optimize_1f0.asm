@@ -1,3 +1,7 @@
+;;@name Optimize 1F0
+;;@author Fernap
+;;@url https://smwc.me/s/31950
+
 ; Optimize 1F0 patch by Fernap
 ;
 ; The idea for this came from a post dug up by LouisDoucet, posted by Morsel, originally noted by MellonPizza (I think).

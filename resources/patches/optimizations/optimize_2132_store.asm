@@ -1,3 +1,6 @@
+;;@name Optimize 2132 Store
+;;@author unknown
+
 lorom
 
 !addr = $0000

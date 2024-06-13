@@ -1,3 +1,7 @@
+;;@name Optimize Status Bar NMI
+;;@author Kevin
+;;@url https://smwc.me/s/33996
+
 if read1($00FFD5) == $23
     sa1rom
     !addr = $6000

@@ -1,3 +1,7 @@
+;;@name Lunar Magic's "VRAM Patch" Optimization
+;;@author Kevin
+;;@url https://smwc.me/s/28028
+
 ; Lunar Magic's "VRAM Patch" Optimization patch
 ; made by KevinM - inspired by Selicre's rants about this problem
 ;
