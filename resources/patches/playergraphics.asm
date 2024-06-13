@@ -1,3 +1,7 @@
+;;@name Player graphics
+;;@author CircleFriendo
+
+
 incsrc "../../shared/freeram.asm"
 incsrc "../../shared/characters.asm"
 
@@ -36,13 +40,19 @@ prot MarioGfx,LuigiGfx,DaisyGfx,PeachGfx,WarioGfx,WaluigiGfx
 
 
 ChooseCharacter:
-    
-    SEP #$20
-    
     LDA !player
-	CMP #!mario		
-	BNE +
-	
+    ASL A : TAX
+    JMP.w (Players, X)
+
+Players:
+    dw Mario
+    dw Luigi
+    dw Peach
+    dw Daisy
+    dw Wario
+    dw Waluigi
+
+Mario:
     LDA.B #MarioGfx     :    STA   $03
     LDA.b #MarioGfx>>8  :    STA   $04
     LDA.b #MarioGfx>>16 :    STA   $05
@@ -63,10 +73,9 @@ ChooseCharacter:
     LDA.b #MarioFirePalette>>8  :    STA   $07
     LDA.b #MarioFirePalette>>16 :    STA   $08
     
-	+ LDA !player
-	CMP #!luigi
-	BNE +
+	+ RTS
 	
+Luigi:
     LDA.B #LuigiGfx     :    STA   $03 
     LDA.b #LuigiGfx>>8  :    STA   $04
     LDA.b #LuigiGfx>>16 :    STA   $05
@@ -87,10 +96,9 @@ ChooseCharacter:
     LDA.b #LuigiFirePalette>>8  :    STA   $07
     LDA.b #LuigiFirePalette>>16 :    STA   $08
     
-    + LDA !player
-    CMP #!peach
-    BNE +
+    + RTS
 	
+Peach:
     LDA.B #PeachGfx     :    STA   $03
     LDA.b #PeachGfx>>8  :    STA   $04
     LDA.b #PeachGfx>>16 :    STA   $05
@@ -111,10 +119,9 @@ ChooseCharacter:
     LDA.b #PeachFirePalette>>8  :    STA   $07
     LDA.b #PeachFirePalette>>16 :    STA   $08
     
-    + LDA !player
-    CMP #!daisy
-    BNE +
-	
+    + RTS
+
+Daisy:
     LDA.B #DaisyGfx     :    STA   $03
     LDA.b #DaisyGfx>>8  :    STA   $04
     LDA.b #DaisyGfx>>16 :    STA   $05
@@ -135,10 +142,9 @@ ChooseCharacter:
     LDA.b #DaisyFirePalette>>8  :    STA   $07
     LDA.b #DaisyFirePalette>>16 :    STA   $08
     
-	+ LDA !player
-    CMP #!wario
-    BNE +
-	
+	+ RTS
+
+Wario:
     LDA.B #WarioGfx     :    STA   $03
     LDA.b #WarioGfx>>8  :    STA   $04
     LDA.b #WarioGfx>>16 :    STA   $05
@@ -159,10 +165,9 @@ ChooseCharacter:
     LDA.b #WarioFirePalette>>8  :    STA   $07
     LDA.b #WarioFirePalette>>16 :    STA   $08
     
-    + LDA !player
-    CMP #!waluigi
-    BNE +
-	
+    + RTS
+
+Waluigi:
     LDA.B #WaluigiGfx     :    STA   $03
     LDA.b #WaluigiGfx>>8  :    STA   $04
     LDA.b #WaluigiGfx>>16 :    STA   $05
@@ -184,7 +189,7 @@ ChooseCharacter:
     LDA.b #WaluigiFirePalette>>16 :    STA   $08
     
     +
-RTS
+    RTS
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

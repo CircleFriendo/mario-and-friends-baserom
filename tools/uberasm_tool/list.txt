@@ -16,6 +16,7 @@ overworld:
 
 ; Game mode resources
 gamemode:
+00  defaultcharacter.asm
 05  defaultcharacter.asm
 0E  overworldswitch.asm
 13  preloadname.asm
