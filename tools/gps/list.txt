@@ -27,6 +27,14 @@
 0214:0025 character/wario.asm
 0215:0025 character/waluigi.asm
 
+0220:0025 boost_blocks/boost_up.asm
+0221:0025 boost_blocks/boost_upright.asm
+0222:0025 boost_blocks/boost_right.asm
+0223:0025 boost_blocks/boost_downright.asm
+0224:0025 boost_blocks/boost_down.asm
+0225:0025 boost_blocks/boost_downleft.asm
+0226:0025 boost_blocks/boost_left.asm
+0227:0025 boost_blocks/boost_upleft.asm
 
 ; Custom Global Blocks
 
