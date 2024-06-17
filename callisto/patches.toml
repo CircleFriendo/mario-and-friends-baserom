@@ -79,5 +79,7 @@ patches = [
 	"resources/patches/optimizations/layer2_buoyancy_optimize.asm",
 	"resources/patches/optimizations/optimize_1f0.asm",
 	"resources/patches/optimizations/optimize_2132_store.asm",
-	"resources/patches/optimizations/optimize_statusbar_nmi.asm"
+	"resources/patches/optimizations/optimize_statusbar_nmi.asm",
+
+	"resources/patches/objectool/objectool.asm"
 ]
