@@ -2,7 +2,8 @@ incsrc "../../../shared/freeram.asm"
 incsrc "../../../shared/characters.asm"
 
 !characterflags = !objectool_level_flags_freeram
-
+!disableswitchflag = !objectool_level_flags_freeram
+!disableswitchbit = $40
 
 init:
     LDA !characterflags : AND #!characterbits : BEQ +
@@ -15,6 +16,8 @@ Main:
 ;; we use L/R for character switching so disable scrolling
     
     STZ $1401|!addr			;disable L/R scrolling
+
+    LDA !disableswitchflag : AND #!disableswitchbit : BNE Continue
 
     CheckR:
 	LDA $18				;check if controller button is newly pressed..
@@ -67,10 +70,3 @@ Backward:
     AND Flags,X : BEQ -
 
     + RTL
-    
-Timed:
-    LDA $14
-    AND #$7F
-    BNE +
-    JSL Forward
-+   RTL

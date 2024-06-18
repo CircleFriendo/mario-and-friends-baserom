@@ -8,13 +8,13 @@ incsrc "../../../shared/freeram.asm"
 
 ; Extended Objects 98-CF reserved by UberASM Object system
 
-CustExObj98:
-CustExObj99:
-CustExObj9A:
-CustExObj9B:
-CustExObj9C:
-CustExObj9D:
-CustExObj9E:
+CustExObj98:   ; Enable Mario
+CustExObj99:   ; Enable Luigi
+CustExObj9A:   ; Enable Peach
+CustExObj9B:   ; Enable Daisy
+CustExObj9C:   ; Enable Wario
+CustExObj9D:   ; Enable Waluigi
+CustExObj9E:   ; Disable Switch on L/R
 CustExObj9F:
 CustExObjA0:
 CustExObjA1:
