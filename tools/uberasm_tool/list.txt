@@ -20,6 +20,7 @@ gamemode:
 05  defaultcharacter.asm
 0E  overworldswitch.asm
 10  uberasm_objects_gm10.asm
+12  autotile.asm
 13  preloadname.asm
 1B  defaultphysics.asm
 
