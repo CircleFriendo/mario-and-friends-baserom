@@ -19,6 +19,7 @@ gamemode:
 00  defaultcharacter.asm
 05  defaultcharacter.asm
 0E  overworldswitch.asm
+10  uberasm_objects_gm10.asm
 13  preloadname.asm
 1B  defaultphysics.asm
 

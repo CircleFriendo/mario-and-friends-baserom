@@ -7,6 +7,8 @@ init:
     
     LDA !player
     STA !lastplayer
+
+    JSL switch_init
     
     JSL boostjump_init
     JSL float_init
