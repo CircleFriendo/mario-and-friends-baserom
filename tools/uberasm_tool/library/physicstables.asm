@@ -1,3 +1,52 @@
+
+;;; cape values
+
+dive_speed_mario:
+		db $01,$10,$30,$30,$38,$38,$40  
+        
+air_catch_speed_mario:       
+		db $00,$00,$00,$F8,$F8,$F8,$F4,$F0,$C8,$02,$01
+
+
+dive_speed_luigi:
+		db $01,$0C,$10,$10,$14,$14,$40  
+        
+air_catch_speed_luigi:       
+		db $00,$00,$F4,$F0,$C8,$C8,$C8,$C8,$C8,$02,$01
+
+
+dive_speed_peach:
+		db $01,$04,$08,$0C,$10,$20,$30  
+        
+air_catch_speed_peach:      
+        ;   00  08  10  18  20  28  30
+		db $00,$F8,$F8,$F4,$F0,$F8,$C8,$C8,$C8,$02,$01
+
+
+dive_speed_daisy:
+		db $01,$10,$20,$28,$30,$38,$40  
+        
+air_catch_speed_daisy:       
+		;   00  08  10  18  20  28  30  38  40
+		db $00,$00,$00,$F4,$F4,$F0,$E8,$E0,$C8,$02,$01
+
+
+dive_speed_wario:
+		db $01,$10,$30,$40,$48,$50,$50  
+        
+air_catch_speed_wario:     
+        ;   00  08  10  18  20  28  30  38  40  48  50 
+		db $00,$00,$00,$F8,$F8,$F8,$F4,$F0,$F0,$E8,$C8
+
+
+dive_speed_waluigi:
+		db $01,$10,$30,$30,$38,$38,$40  
+        
+air_catch_speed_waluigi:       
+		db $00,$00,$00,$F8,$F8,$F8,$F4,$F0,$C8,$02,$01
+
+
+
 !spinjumpenableflag = $7f9e08   ;FreeRAM
 
 !jump_speed         = $7f9f00   ;FreeRAM
@@ -119,12 +168,14 @@ luigi:
 daisy:
     JSL default
     JSL short
+    JSL cape_daisy
     LDA #$00 : STA !spinjumpenableflag  
     RTL
    
 peach:
     JSL default
     JSL tight
+    JSL cape_peach
     LDA #$1A : STA !pmeter_speed
     LDA #$21 : STA !pspeed_pose
     LDA #$00 : STA !spinjumpenableflag
@@ -133,7 +184,8 @@ peach:
 wario: 
     JSL default
     JSL high_gravity
-    JSL heavy    
+    JSL heavy  
+    JSL cape_wario  
     LDA #$02 : STA !spinjumpenableflag
     
     RTL
@@ -143,6 +195,7 @@ waluigi:
     JSL low_gravity_short
     JSL waluigi_gravity
     JSL slow_accel
+    JSL cape_waluigi
     LDA #$00 : STA !spinjumpenableflag
     RTL
 
@@ -162,14 +215,6 @@ waluigi_gravity:
     LDA.b #gravity_waluigi>>8 : STA !gravity+1
     LDA.b #gravity_waluigi>>16 : STA !gravity+2
     
-    ;LDA.b #dive_speed_luigi : STA !dive_speed
-    ;LDA.b #dive_speed_luigi>>8 : STA !dive_speed+1
-    ;LDA.b #dive_speed_luigi>>16 : STA !dive_speed+2    
-    
-    ;LDA.b #air_catch_speed_luigi : STA !air_catch_speed
-    ;LDA.b #air_catch_speed_luigi>>8 : STA !air_catch_speed+1
-    ;LDA.b #air_catch_speed_luigi>>16 : STA !air_catch_speed+2
-        
     LDA.b #pea_bouncer_ab_waluigi : STA !pea_bouncer_ab
     LDA.b #pea_bouncer_ab_waluigi>>8 : STA !pea_bouncer_ab+1
     LDA.b #pea_bouncer_ab_waluigi>>16 : STA !pea_bouncer_ab+2
@@ -186,16 +231,10 @@ waluigi_gravity:
     LDA #$D8 : STA !enemy_bounce_low
     LDA #$B4 : STA !enemy_bounce_high
     LDA #$BB : STA !water_jump
-    ;LDA #$E2 : STA !wallrun_jump
     LDA #$BF : STA !rope_jump
     LDA #$E9 : STA !climb_jump_low
     LDA #$BF : STA !climb_jump_high
     LDA #$CA : STA !yoshi_knocked_off
-    
-    ;LDA #$CA : STA !yoshi_dismount_speed_high
-    ;LDA #$DA : STA !yoshi_dismount_speed_low
-    ;LDA #$0A : STA !yoshi_dismount_speed_right
-    ;LDA #$F6 : STA !yoshi_dismount_speed_left
     
     RTL
     
@@ -246,6 +285,50 @@ low_gravity_short:
     
     RTL
 
+cape_peach:
+    LDA.b #dive_speed_peach : STA !dive_speed
+    LDA.b #dive_speed_peach>>8 : STA !dive_speed+1
+    LDA.b #dive_speed_peach>>16 : STA !dive_speed+2    
+    
+    LDA.b #air_catch_speed_peach : STA !air_catch_speed
+    LDA.b #air_catch_speed_peach>>8 : STA !air_catch_speed+1
+    LDA.b #air_catch_speed_peach>>16 : STA !air_catch_speed+2
+
+    RTL
+
+cape_daisy:
+    LDA.b #dive_speed_daisy : STA !dive_speed
+    LDA.b #dive_speed_daisy>>8 : STA !dive_speed+1
+    LDA.b #dive_speed_daisy>>16 : STA !dive_speed+2    
+    
+    LDA.b #air_catch_speed_daisy : STA !air_catch_speed
+    LDA.b #air_catch_speed_daisy>>8 : STA !air_catch_speed+1
+    LDA.b #air_catch_speed_daisy>>16 : STA !air_catch_speed+2
+
+    RTL
+
+cape_wario:
+    LDA.b #dive_speed_wario : STA !dive_speed
+    LDA.b #dive_speed_wario>>8 : STA !dive_speed+1
+    LDA.b #dive_speed_wario>>16 : STA !dive_speed+2    
+    
+    LDA.b #air_catch_speed_wario : STA !air_catch_speed
+    LDA.b #air_catch_speed_wario>>8 : STA !air_catch_speed+1
+    LDA.b #air_catch_speed_wario>>16 : STA !air_catch_speed+2
+
+    RTL
+
+cape_waluigi:
+    LDA.b #dive_speed_waluigi : STA !dive_speed
+    LDA.b #dive_speed_waluigi>>8 : STA !dive_speed+1
+    LDA.b #dive_speed_waluigi>>16 : STA !dive_speed+2    
+    
+    LDA.b #air_catch_speed_waluigi : STA !air_catch_speed
+    LDA.b #air_catch_speed_waluigi>>8 : STA !air_catch_speed+1
+    LDA.b #air_catch_speed_waluigi>>16 : STA !air_catch_speed+2
+
+    RTL
+
 low_gravity_jump:
     LDA.b #jump_speed_luigi     : STA !jump_speed
     LDA.b #jump_speed_luigi>>8  : STA !jump_speed+1
@@ -262,26 +345,9 @@ high_gravity:
     LDA.b #gravity_heavy>>8 : STA !gravity+1
     LDA.b #gravity_heavy>>16 : STA !gravity+2
     
-    ;;;; These are the default values for normal gravity
-    ;;;; They will result in shorter bounces
-    ;;;; Adjust to be higher
-    ;LDA #$A0 : STA !noteblock_bounce
-    ;LDA #$D0 : STA !turnblock_bounce
-    ;LDA #$B0 : STA !spring_bounce_low
-    ;LDA #$80 : STA !spring_bounce_high
-    ;LDA #$C0 : STA !diagonal_pipe
     LDA #$C9 : STA !enemy_bounce_low
     LDA #$9A : STA !enemy_bounce_high
-    ;LDA #$AA : STA !water_jump
-    ;LDA #$E0 : STA !wallrun_jump
-    ;LDA #$B0 : STA !rope_jump
-    ;LDA #$F0 : STA !climb_jump_low
-    ;LDA #$B0 : STA !climb_jump_high
-    ;LDA #$C0 : STA !yoshi_knocked_off
-    ;LDA #$A0 : STA !yoshi_dismount_speed_high
-    ;LDA #$C0 : STA !yoshi_dismount_speed_low
-    ;LDA #$10 : STA !yoshi_dismount_speed_right
-    ;LDA #$F0 : STA !yoshi_dismount_speed_left  
+    
     
     RTL
 
@@ -337,17 +403,9 @@ tight:
     LDA.b #neutral_decel_tight>>8 : STA !neutral_decel+1
     LDA.b #neutral_decel_tight>>16 : STA !neutral_decel+2
     
-    ;LDA.b #neutral_decel_ice_tight : STA !neutral_decel_ice
-    ;LDA.b #neutral_decel_ice_tight>>8 : STA !neutral_decel_ice+1
-    ;LDA.b #neutral_decel_ice_tight>>16 : STA !neutral_decel_ice+2
-
     LDA.b #accel_tight : STA !accel
     LDA.b #accel_tight>>8 : STA !accel+1
     LDA.b #accel_tight>>16 : STA !accel+2
-
-    ;LDA.b #accel_ice_tight : STA !accel_ice
-    ;LDA.b #accel_ice_tight>>8 : STA !accel_ice+1
-    ;LDA.b #accel_ice_tight>>16 : STA !accel_ice+2
 
     LDA.b #max_x_speed_tight : STA !max_x_speed
     LDA.b #max_x_speed_tight>>8 : STA !max_x_speed+1
@@ -357,9 +415,7 @@ tight:
 
     
 jump_speed_short:
-		;db $B0,$B6,$AE,$B4,$AB,$B2,$A9,$B0  ; normal jump speed
-        ;db $A6,$AE,$A4,$AB,$A1,$A9,$9F,$A6
-        db $B8,$00,$B6,$00,$B4,$00,$B2,$00  ; short jump speed
+		db $B8,$00,$B6,$00,$B4,$00,$B2,$00  ; short jump speed
         db $B0,$00,$AE,$00,$AC,$00,$AA,$00  ; spin jump values not set
   
 jump_speed_luigi:
@@ -488,17 +544,9 @@ gravity_luigi:
 		db $02,$01,$04,$10,$F4,$01,$01,$01,$02,$06
 
 gravity_waluigi:
-;		db $02,$01,$04,$10,$F4,$01,$01,$01,$02,$06    ;; low    
         db $04,$02,$04,$10,$F4,$01,$02,$02,$05,$06
-;       db $06,$03,$04,$10,$F4,$01,$03,$04,$05,$06    ;; normal
-;       db $06,$04,$04,$10,$F4,$01,$03,$04,$05,$06    ;; high
 
 
-dive_speed_luigi:
-		db $01,$0C,$10,$10,$14,$14,$40  
-        
-air_catch_speed_luigi:       
-		db $00,$00,$F4,$F0,$C8,$C8,$C8,$C8,$C8,$02,$01
         
 pea_bouncer_ab_luigi:
 		db $D6,$D4,$D0,$CC,$C8,$C2,$BC,$B8
