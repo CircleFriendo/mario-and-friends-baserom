@@ -1,4 +1,7 @@
+incsrc "../../../shared/freeram.asm"
 
+!enableautotileflag = !objectool_level_flags_freeram
+!enableautotilebit = $80
 
 !map16_filter = $10   ; active on map16 pages 10-1F, 30-3F, etc.
 
@@ -427,6 +430,8 @@ endmacro
 
 init:
     
+    LDA !enableautotileflag : AND #!enableautotilebit : BEQ ++
+
     REP #$20 : LDA #$C800 : STA $6B : STA $6E : SEP #$20
     
     LDA $70 : STA $0A  ;; set up [$08] for the table at $7FC800
