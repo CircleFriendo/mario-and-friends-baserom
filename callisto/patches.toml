@@ -81,5 +81,7 @@ patches = [
 	"resources/patches/optimizations/optimize_2132_store.asm",
 	"resources/patches/optimizations/optimize_statusbar_nmi.asm",
 
-	"resources/patches/objectool/objectool.asm"
+	"resources/patches/objectool/objectool.asm",
+
+	"resources/patches/tweaks.asm"
 ]
