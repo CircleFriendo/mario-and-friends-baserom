@@ -12,7 +12,11 @@ else
     !retry_freeram = $7FB400
 endif
 
-
+;; objectool flags
+!characterflags = !objectool_level_flags_freeram
+!disableswitchflag = !objectool_level_flags_freeram
+!disableswitchbit = $40
+!startcharacterflags = !objectool_level_flags_freeram+1
 
 ;; player ability freeram
 

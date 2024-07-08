@@ -15,7 +15,7 @@ CustExObj9B:   ; Enable Daisy
 CustExObj9C:   ; Enable Wario
 CustExObj9D:   ; Enable Waluigi
 CustExObj9E:   ; Disable Switch on L/R
-CustExObj9F:
+CustExObj9F:   ; Enable autotile
 CustExObjA0:
 CustExObjA1:
 CustExObjA2:

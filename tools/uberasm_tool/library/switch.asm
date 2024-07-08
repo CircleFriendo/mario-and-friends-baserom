@@ -1,12 +1,16 @@
 incsrc "../../../shared/freeram.asm"
 incsrc "../../../shared/characters.asm"
 
-!characterflags = !objectool_level_flags_freeram
-!disableswitchflag = !objectool_level_flags_freeram
-!disableswitchbit = $40
+
 
 init:
-    LDA !characterflags : AND #!characterbits : BEQ +
+    LDA !startcharacterflags : AND #!characterbits : BEQ ++
+    LDX #$00
+    - LDA !startcharacterflags : AND Flags,X : BNE +++
+        INX 
+    BRA -
+    +++ TXA : STA !player : BRA +
+    ++ LDA !characterflags : AND #!characterbits : BEQ +
     LDA !player : TAX : AND Flags,X : BNE +
         JSL Forward
     + RTL
