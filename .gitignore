@@ -47,7 +47,7 @@ tools/pixi/asm/_ClusterPtr.bin
 tools/pixi/asm/_ExtendedPtr.bin
 tools/pixi/asm/_ExtendedCapePtr.bin
 tools/pixi/asm/_CustomSize.bin
-shared.asm
+
 spr_temp.asm
 *.extmod
 *.mw2
