@@ -38,7 +38,7 @@
 0295:0025 global/one_way_right.asm
 0296:0130 global/solid_when_off.asm
 0297:0130 global/solid_when_on.asm
-0298:0130 global/breakable_by_item.asm
+0298:0025 global/breakable_by_item.asm
 0299:0025 global/sprite_killer.asm
 029A:0130 global/hurt_death.asm
 029B:0025 global/hurt_death+sprite_passthrough.asm
