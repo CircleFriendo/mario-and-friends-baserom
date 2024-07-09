@@ -13,7 +13,9 @@ init:
     ++ LDA !characterflags : AND #!characterbits : BEQ +
     LDA !player : TAX : AND Flags,X : BNE +
         JSL Forward
-    + RTL
+    + 
+    LDA !player : STA !lastplayer
+    RTL
 
 Main:
 
