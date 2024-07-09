@@ -15,7 +15,7 @@ luigi:
     DEX
     BPL -
     RTL
-    
+
 daisy:
     LDX #$04 ; 5 bytes
     - LDA DaisyName,x
@@ -23,7 +23,7 @@ daisy:
     DEX
     BPL -
     RTL
-    
+
 peach:
     LDX #$04 ; 5 bytes
     - LDA PeachName,x
@@ -47,26 +47,26 @@ waluigi:
     RTL
 
 MarioName:
-    ;;   M     A     R     I     O 
-    db $16,  $0A,  $1B,  $12,  $18
+    ;; M   A   R   I   O
+    db $30,$31,$32,$33,$34
 
 LuigiName:
-    ;;   L     U     I     G     I 
-    db $15,  $1E,  $12,  $10,  $12
+    ;; L   U   I   G   I
+    db $40,$41,$42,$43,$44
 
 
 PeachName:
-    ;;   P     E     A     C     H 
-    db $19,  $0E,  $0A,  $0C,  $11
-    
+    ;; P   E   A   C   H
+    db $65,$66,$67,$68,$69
+
 DaisyName:
-    ;;   D     A     I     S     Y 
-    db $0D,  $0A,  $12,  $1C,  $22
+    ;; D   A   I   S   Y
+    db $55,$56,$57,$58,$59
 
 WarioName:
-    ;;     W    A     R     I     O 
-    db   $20, $0A,  $1B,  $12,  $18
+    ;; W   A   R   I   O
+    db $38,$39,$32,$33,$34
 
 WaluigiName:
-    ;;   W    A    L     U     I     G     I 
-    db $20, $0A, $15,  $1E,  $12,  $10,  $12
+    ;; W   A   L   U   I   G   I
+    db $48,$49,$40,$41,$42,$43,$44
