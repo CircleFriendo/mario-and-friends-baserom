@@ -17,7 +17,11 @@ init:
     JSL dash_init
     
     RTL
-    
+
+nmi:
+    JSL names_color
+    RTL
+
 main:
     JSL switch_Main
 
