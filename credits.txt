@@ -91,6 +91,9 @@ Luigi Physics - Lui - https://www.smwcentral.net/?p=viewthread&t=100361&page=1&p
 -- UberASM --
 Retry System v0.6.0 - Kevin - https://github.com/kkevinm/retry-system/releases/tag/v0.6.0
 UberASM Objects System - AmperSam, underway, MarioFanGamer
+Mario & Friends UberASM - CircleFriendo
+Autotile UberASM - Circlefriendo - https://smwc.me/s/37887
+
 
 -- Blocks --
 Basic Baserom Blocks - AmperSam
