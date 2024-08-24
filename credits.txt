@@ -27,6 +27,7 @@ ObjecTool 0.5* - 0x400, imamelia - https://smwc.me/s/24217
 
 -- Bug Fix Patches --
 $13FB Game Crash Fix (Fireberry) - p4plus2 - https://smwc.me/s/18319
+Autoscroll ($1411) + L/R Softlock Fix - Telinc1 - https://smwc.me/s/15711 
 Ball n' Chain and Yoshi Interaction Fix - Kevin - https://smwc.me/s/22761
 BG Candle Flames Priority Fix (for SA-1 MaxTile) - Kevin - https://smwc.me/s/32380
 Block Duplication Fix v1.6* - Tattletale, lolcats439, spooonsss - https://smwc.me/s/37662
