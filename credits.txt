@@ -1,5 +1,7 @@
 Credits
 
+RHR BaseRom
+
 -- Consistency Patches --
 Capespin Direction Consistency - Katun24, AmperSam, binavik
 Capespin Hitbox Consistency + Net Punching Hitbox Correction - Katun24, tjb0607
