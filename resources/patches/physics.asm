@@ -482,15 +482,15 @@ air_catch_speed_hijack:
         jml air_catch_speed_hijack_ret2
         
 pea_bouncer_ab_hijack:
-        LDA !pea_bouncer_ab   : STA $00
-        LDA !pea_bouncer_ab+1 : STA $01
-        LDA !pea_bouncer_ab+2 : STA $02
+        LDA !pea_bouncer_ab   : STA $0A
+        LDA !pea_bouncer_ab+1 : STA $0B
+        LDA !pea_bouncer_ab+2 : STA $0C
     
         lda !riding_yoshi
 		beq +
-        LDA #$FF : STA $00
-        LDA #$CD : STA $01
-        LDA #$02 : STA $02
+        LDA #$FF : STA $0A
+        LDA #$CD : STA $0B
+        LDA #$02 : STA $0C
         +
         lda [$00],y : sta !player_y_speed
         
@@ -498,15 +498,15 @@ pea_bouncer_ab_hijack:
 	
         
 pea_bouncer_noab_hijack:
-        LDA !pea_bouncer_noab   : STA $00
-        LDA !pea_bouncer_noab+1 : STA $01
-        LDA !pea_bouncer_noab+2 : STA $02
+        LDA !pea_bouncer_noab   : STA $0A
+        LDA !pea_bouncer_noab+1 : STA $0B
+        LDA !pea_bouncer_noab+2 : STA $0C
     
         lda !riding_yoshi
 		beq +
-        LDA #$07 : STA $00
-        LDA #$CE : STA $01
-        LDA #$02 : STA $02
+        LDA #$07 : STA $0A
+        LDA #$CE : STA $0B
+        LDA #$02 : STA $0C
         +
         
         lda [$00],y : sta !player_y_speed
